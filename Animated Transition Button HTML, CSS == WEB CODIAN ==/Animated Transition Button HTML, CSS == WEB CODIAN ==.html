@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 12.5rem 0 0 31.25rem;
+            height: 100vh;
+            font-family: 'Roboto', sans-serif;
+            overflow: hidden;
+            background: linear-gradient(-145deg, #CC208E 0%, #6713D2 100%);
+        }
+
+        button{
+            font-size: 1.25rem;
+            font-weight: lighter;
+            background: transparent;
+            padding: 2.875rem 5rem; 
+            color: #fff;
+            display: block;
+            margin: 5rem 0 0 0 ;
+            letter-spacing: 0.0625rem;
+            outline: none;
+            position: relative;
+            border: 0.125rem solid #fff;
+            overflow: hidden;
+            transition: all ease 0.3s;
+        }
+
+        button:hover{
+            color: #000;
+        }
+
+        button::after{
+            content: '';
+            position: absolute;
+            z-index: -1;
+            top: 50%;
+            left: 50%;
+            background: #fff;
+            opacity: 0;
+            transition: all ease 0.3s;
+            transform: translateX(-50%) translateY(-50%);
+        }
+
+        button:hover::after{
+            opacity: 1;
+        }
+
+        .btn-horizontal::after{
+            width: 0;
+            height: 105%;
+        }
+
+        .btn-horizontal:hover::after{
+            width: 90%;
+        }
+
+        .btn-vertical::after{
+            height: 0;
+            width: 105%;
+        }
+
+        .btn-vertical:hover::after{
+            height: 70%;
+        }
+    </style>
+</head>
+<body>
+    <button class="btn-horizontal">Created By: WEB CODIAN</button>
+    <button class="btn-vertical">Created By: WEB CODIAN</button>
+</body>
+</html>
